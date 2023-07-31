@@ -1,0 +1,40 @@
+.circle-enter-active {
+  position: absolute;
+  background: orange;
+  height: 200vh;
+  width: 200vw;
+  animation: circle 1s linear;
+  transition: clip-path 2s;
+}
+.circle-exit-active {
+  position: absolute;
+
+  overflow: hidden;
+  animation: circle 1s linea;
+  transition: clip-path 2s;
+}
+@keyframes circle {
+  0% {
+    clip-path: circle(25%);
+  }
+  50% {
+    clip-path: circle((75%));
+  }
+  100% {
+    clip-path: circle(75%);
+  }
+}
+@keyframes reverse-circle {
+  0% {
+    clip-path: circle(75%);
+  }
+  50% {
+    clip-path: circle((50%));
+  }
+  75% {
+    clip-path: circle((35%));
+  }
+  100% {
+    clip-path: circle(0%);
+  }
+}
