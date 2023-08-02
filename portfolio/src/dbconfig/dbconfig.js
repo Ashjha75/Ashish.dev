@@ -1,8 +1,12 @@
 import mongoose from 'mongoose';
 
-export async function connect() {
+export default async function connect() {
   try {
-    mongoose.connect(process.env.DATABASE_URL);
+    // mongoose.connect(process.env.DATABASE_URL);
+    mongoose.connect(
+      'mongodb+srv://rjha15363:ashjha90@cluster0.bu7tejm.mongodb.net/databaseNext1'
+    );
+
     const connection = mongoose.connection;
     connection.on('connected', () => {
       console.log('MongoDB connected successfully');

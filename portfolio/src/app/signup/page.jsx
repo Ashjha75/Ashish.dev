@@ -43,7 +43,8 @@ export default function signup() {
             placeholder="userName"
             type="text"
             name="userName"
-            onChange={handleChange}
+            value={user.userName}
+            onChange={(e) => setUser({ ...user, userName: e.target.value })}
           />
           <label htmlFor="last">Email</label>
           <input
@@ -51,15 +52,17 @@ export default function signup() {
             type="text"
             placeholder="email"
             name="email"
-            onChange={handleChange}
+            value={user.email}
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
           />
           <label htmlFor="last">Password</label>
           <input
             className="p-3  text-black outline-none rounded-sm"
             type="password"
             name="password"
+            value={user.password}
             placeholder="password"
-            onChange={handleChange}
+            onChange={(e) => setUser({ ...user, password: e.target.value })}
           />
           <button
             className="p-2 w-[80px] mx-auto border-2 border-white rounded-md"
