@@ -10,14 +10,13 @@ const Header = () => {
       className={`delay-300 h-screen  ${isDark ? "bg-blue-700" : "bg-blue-50"}`}
     >
       <div
-        className={`float-right mr-0   ${
-          isDark ? "circle-enter-active" : "circle-exit-active"
-        }`}
+        className={`float-right mr-0   ${isDark ? "circle" : "circle2"}`}
       ></div>
+
       <div
         className="transition-transform transform float-right mx-10 my-5 text-black cursor-pointer  "
         onClick={toggleTheme}
-        style={{ transform: isDark ? "rotate(260deg)" : "rotate(0deg)" }}
+        style={{ transform: isDark ? "rotate(260deg) " : "rotate(0deg)" }}
       >
         {isDark ? (
           <BsFillMoonStarsFill className="scale-150  " />
